@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos de Uso - Aplicación de Discord</title>
+    <style>
+        :root {
+            --primary-color: #5865F2;
+            --secondary-color: #404EED;
+            --dark-color: #23272A;
+            --light-color: #f4f4f6;
+            --text-color: #333;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --warning-color: #ff6b6b;
+            --success-color: #51cf66;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        h3 {
+            margin: 1.5rem 0 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .warning-box {
+            background-color: rgba(255, 107, 107, 0.1);
+            border-left: 4px solid var(--warning-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .info-box {
+            background-color: rgba(88, 101, 242, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .success-box {
+            background-color: rgba(81, 207, 102, 0.1);
+            border-left: 4px solid var(--success-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .contact-info {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .acceptance-section {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Términos de Uso</h1>
+            <p class="subtitle">Para nuestra aplicación de Discord</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <p class="last-updated">Última actualización: <span id="current-date"></span></p>
+            
+            <div class="acceptance-section">
+                <h2>¡Bienvenido!</h2>
+                <p>Al utilizar nuestra aplicación de Discord, aceptas cumplir con estos Términos de Uso. Por favor, léelos detenidamente.</p>
+            </div>
+            
+            <h2>1. Aceptación de los Términos</h2>
+            <p>Al acceder y utilizar nuestra aplicación de Discord ("la Aplicación"), aceptas estar legalmente sujeto a estos Términos de Uso y a nuestra Política de Privacidad. Si no estás de acuerdo con alguno de estos términos, por favor no utilices la Aplicación.</p>
+            
+            <div class="warning-box">
+                <p><strong>Importante:</strong> El uso de nuestra Aplicación también está sujeto a los <a href="https://discord.com/terms" target="_blank">Términos de Servicio de Discord</a> y las <a href="https://discord.com/guidelines" target="_blank">Directrices de la Comunidad de Discord</a>. Debes cumplir con ambas políticas.</p>
+            </div>
+            
+            <h2>2. Descripción del Servicio</h2>
+            <p>Nuestra Aplicación proporciona las siguientes funcionalidades:</p>
+            <ul>
+                <li>[Descripción de función principal 1]</li>
+                <li>[Descripción de función principal 2]</li>
+                <li>[Descripción de función principal 3]</li>
+                <li>Otras funciones específicas de la Aplicación</li>
+            </ul>
+            
+            <h2>3. Uso Aceptable</h2>
+            <p>Al utilizar nuestra Aplicación, aceptas:</p>
+            <ul>
+                <li>Utilizar la Aplicación solo para fines legales</li>
+                <li>Respetar a todos los usuarios y administradores de servidores</li>
+                <li>Cumplir con las reglas específicas de cada servidor de Discord</li>
+                <li>No realizar acciones que puedan dañar o sobrecargar la Aplicación</li>
+                <li>No intentar acceder a áreas no autorizadas de la Aplicación</li>
+            </ul>
+            
+            <div class="warning-box">
+                <h3>Uso Prohibido</h3>
+                <p>Está estrictamente prohibido:</p>
+                <ul>
+                    <li>Utilizar la Aplicación para acosar, amenazar o intimidar a otros usuarios</li>
+                    <li>Distribuir contenido ilegal, difamatorio u ofensivo</li>
+                    <li>Realizar spam o enviar mensajes automáticos no solicitados</li>
+                    <li>Intentar explotar vulnerabilidades de seguridad</li>
+                    <li>Utilizar la Aplicación para actividades fraudulentas</li>
+                </ul>
+            </div>
+            
+            <h2>4. Cuentas y Acceso</h2>
+            <p>Para utilizar nuestra Aplicación, necesitas:</p>
+            <ul>
+                <li>Una cuenta válida de Discord</li>
+                <li>Permisos adecuados en los servidores donde se utiliza la Aplicación</li>
+                <li>Cumplir con los requisitos de edad mínima de Discord (13+ años)</li>
+            </ul>
+            
+            <h2>5. Limitación de Responsabilidad</h2>
+            <p>La Aplicación se proporciona "tal cual" y "según disponibilidad". No garantizamos que:</p>
+            <ul>
+                <li>La Aplicación esté siempre disponible o libre de errores</li>
+                <li>Los resultados obtenidos mediante la Aplicación sean precisos o confiables</li>
+                <li>La Aplicación cumpla con todos tus requisitos específicos</li>
+            </ul>
+            
+            <div class="info-box">
+                <p><strong>En la máxima medida permitida por la ley, no seremos responsables por ningún daño directo, indirecto, incidental o consecuente que surja del uso o la imposibilidad de usar la Aplicación.</strong></p>
+            </div>
+            
+            <h2>6. Modificaciones del Servicio</h2>
+            <p>Nos reservamos el derecho de:</p>
+            <ul>
+                <li>Modificar o discontinuar la Aplicación (temporal o permanentemente)</li>
+                <li>Cambiar las funcionalidades disponibles</li>
+                <li>Establecer límites de uso</li>
+                <li>Cobrar por ciertas funcionalidades (con aviso previo)</li>
+            </ul>
+            
+            <h2>7. Propiedad Intelectual</h2>
+            <p>Todos los derechos de propiedad intelectual relacionados con la Aplicación, incluyendo pero no limitado a:</p>
+            <ul>
+                <li>Código fuente</li>
+                <li>Diseño e interfaz</li>
+                <li>Documentación</li>
+                <li>Logotipos y marcas</li>
+            </ul>
+            <p>son propiedad de [Nombre de tu empresa/desarrollador] o de sus licenciantes.</p>
+            
+            <h2>8. Terminación</h2>
+            <p>Podemos suspender o terminar tu acceso a la Aplicación si:</p>
+            <ul>
+                <li>Violas estos Términos de Uso</li>
+                <li>Realizas actividades que puedan causar daño legal a nosotros o a otros usuarios</li>
+                <li>Lo requerimos por motivos de seguridad o legales</li>
+            </ul>
+            
+            <h2>9. Cambios en los Términos</h2>
+            <p>Podemos actualizar estos Términos de Uso periódicamente. Te notificaremos sobre cambios significativos a través de:</p>
+            <ul>
+                <li>Anuncios en nuestro servidor de Discord oficial</li>
+                <li>Actualizaciones en esta página</li>
+                <li>Mensajes directos (cuando sea apropiado)</li>
+            </ul>
+            
+            <div class="success-box">
+                <p><strong>El uso continuado de la Aplicación después de los cambios constituye la aceptación de los nuevos términos.</strong></p>
+            </div>
+            
+            <h2>10. Ley Aplicable</h2>
+            <p>Estos Términos de Uso se regirán e interpretarán de acuerdo con las leyes de [Tu país/estado], sin tener en cuenta sus disposiciones sobre conflicto de leyes.</p>
+            
+            <h2>11. Contacto</h2>
+            <div class="contact-info">
+                <p>Si tienes alguna pregunta sobre estos Términos de Uso, por favor contáctanos:</p>
+                <ul>
+                    <li>Por Discord: [Tu nombre de usuario o servidor de soporte]</li>
+                    <li>Por correo electrónico: [tu-email@dominio.com]</li>
+                    <li>A través de nuestro sitio web: [URL de tu sitio web]</li>
+                    <li>Servidor de soporte: [Invite de Discord]</li>
+                </ul>
+            </div>
+            
+            <div class="nav-links">
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+                <a href="index.html">Página Principal</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> [Nombre de tu aplicación]. Todos los derechos reservados.</p>
+            <p>Este servicio no está afiliado, respaldado ni patrocinado por Discord Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Actualizar la fecha actual
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        // Actualizar el año actual
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
